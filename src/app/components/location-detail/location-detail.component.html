@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="panel">
+        <div class="panel-head">
+            <div></div>
+            <h2 class="panel-title">{{ locationDetail.name }}</h2>
+            <fa-icon class="clickable-icon fa-xl" [icon]="faArrowsRotate" (click)="this.rndLocation.emit()"></fa-icon>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <app-map [lat]=locationDetail.lat [lng]=locationDetail.lng></app-map>
+            </div>
+        </div>
+        <div class="panel-footer">
+        </div>
+    </div>
+</div>

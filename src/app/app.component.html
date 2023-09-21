@@ -1,1 +1,9 @@
-<h1>Hallo Welt!!!</h1>
+<div>
+    <div *ngIf="!locationDetail">
+        <div class="justified">
+            <fa-icon class="clickable-icon fa-2xl" [icon]="faArrowsRotate" size="2xl" (click)="randomLocation()"></fa-icon>
+        </div>
+    </div>
+    <app-location-detail *ngIf="locationDetail" [locationDetail]="locationDetail"
+        (rndLocation)="randomLocation()"></app-location-detail>
+</div>
